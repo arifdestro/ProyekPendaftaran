@@ -1,0 +1,15 @@
+p {
+    color: green;
+}
+
+div p {
+    color:black;
+}
+
+#aku {
+    color : red;
+}
+
+div.p {
+    color : blue;
+}

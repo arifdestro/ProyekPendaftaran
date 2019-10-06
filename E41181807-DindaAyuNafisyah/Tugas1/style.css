@@ -1,0 +1,60 @@
+body {background-color: rgb(95, 79, 85)}
+h1
+{
+    color : white;
+    background-color: rgb(22, 20, 20);
+    font-variant: small-caps;
+}
+
+
+nav li a
+{
+    color : white;
+    background-color: rgb(38, 38, 107)
+}
+nav 
+{
+    background-color: rgb(147, 221, 221)
+}
+
+.aliasi {
+    float: left;
+    
+}
+
+
+
+.aliasi h3,p
+{ 
+    background-color: rgb(235, 160, 195);
+    color : black;
+}
+
+.container {
+    float: right;
+    width: 500px;
+    height: 700x;
+    background-color: rgb(21, 21, 100)
+    
+}
+.container h3 { 
+    color: white;
+
+}
+
+.container img {
+    width: 100%;
+}
+
+}
+.aksinya {
+    float: left;
+    width: 500px;
+    height: 700px;
+    background-color: aquamarine;
+
+}
+
+.aksinya img {
+    width: 100%
+;}

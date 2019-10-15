@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Teko&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Patua One', cursive;
+    font-weight: 100;
+    color: grey;
+
+}
+
+nav li {
+    display: inline-block;
+    /* float: left; */
+    font-size: 20px;
+}
+
+#logo {
+    float: left;
+}
+
+nav ul {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    margin-right: 20px;
+    padding: 20px;
+    list-style: none;
+    float: right;
+    /* border: 1px solid white; */
+}
+
+header {
+    overflow: hidden;
+    background-color: #D1230C;
+    border-bottom: 5px solid rgb(153, 21, 6);
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container ul p {
+    margin: 20px;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+.container img {
+    width: 180px;
+    position: relative;
+}
+
+.container ul li {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+.container-about{
+    width: auto;
+    margin: 100px 40px;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+ 
+}
+.gambar{
+    width: 200px;
+    margin: 0px 10px 10px 70px;
+    
+}
+.gambar img{
+    width: 200px;
+    margin: 0px 10px 10px 50px;
+    border-right: 2px solid gray;
+}
+
+.keterangan h1 {
+    padding: 10px;
+    margin: 10px 10px 10px 50px;
+}
+.keterangan p {
+    padding: 10px;
+    margin: 10px 10px 10px 50px;
+}
+.container-contact{
+    width: auto;
+    margin: 40px 100px;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+ }
+ .service h1{
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+    font-weight: 500;
+    font-size: 30px;
+ }
+ .service p{
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+ }
+ .contact{
+     width: 300px;
+     margin-left: 20px;
+ }
+ .contact .cp{
+     width: 100px;
+     display: inline-block;
+    
+    }
+ .cp{
+     width: 50px;
+     border-left: 2px solid gray
+    }
+    .contact h1{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 30px;
+    }
+ .cp ul li {
+     margin-top: 20px;
+     list-style-type: none;
+    }
+ .cp img{
+    width: 40px;
+    float: left;
+    padding: 5px;
+     }
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.social {
+    padding: 20px;
+}
+
+.social li{
+    display: inline-block;
+}
+
+.social img {
+    width: 50px;
+}

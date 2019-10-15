@@ -4,16 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>WEB BELAJAR</title>
+
+    
+
     <style>
-    h1 {color: DodgerBlue} 
-    h2 {color: tomato}
-    body {background-color : Gray)}
+       /* Styele untuk merubah warna dll (CSS) dengan cara internal*/
+    h1 {color:whitesmoke} 
+    h2 {color: whitesmoke}
+    body {background-color :rgb(0, 0, 12)}
+
+    #alay {color: rgb(64, 122, 6)}
+    *{
+        margin: 0 0;
+        padding: 0px 10px;
+    }
+    input[type="text"]{
+
+        background-color: darkgray;
+        color: white;
+    }
+    
+        /*mengatur style link*/
+    a:link{
+        color: aquamarine;
+        }
+
+        /*mengatur saat kursor saat menyentuh link*/
+    a:hover{
+        color:black;
+    }
+        /*merubah warna saat link aktif*/
+    a:active{
+        color: rgb(190, 6, 43);
+        }
+
     </style>
     
 </head>
 
-<body bgcolor="LightGray">
+<body>
     
     <header>
         <!--ini untuk judul-->
@@ -22,7 +52,7 @@
 
     <nav>
         <!--ini untuk nafigasi / link-->
-        <ol>
+        <ul>
             <li><a href="#">Home</a></li>
             <li><a href="About.html">About Us</a></li>
             <li><a href="Contact.html">Contact Us</a></li>
@@ -35,7 +65,7 @@
         <!--ini untuk section / isi web nya-->
 
         <h2>Watu Ulo Beach</h2>
-        <p>Watu Ulo Beach is a natural beach who located in Ambulu, <a href="Jember.html">Jember.</a></p>
+        <p id="alay">Watu Ulo Beach is a natural beach who located in Ambulu, <a href="Jember.html">Jember.</a></p>
         <p>It is about 46 km from city of Jember. You can go to there by Motorcycle or car.</p>
         <p>It is a beautyful beach with the <a href="SnakeStone.html">snake stone</a>. The snake stone look like a snake</p>
         <p>with 140 meters come to the beach. Be carefull for the high wave if you want to</p>
@@ -50,9 +80,20 @@
         <p>It is about 46 km from city of Yogyakarta. You can go to there by Motorcycle or car.</p>
         <p>It is a beautyful beach with the <a href="SnakeStone.html">big waves so be carefull for the high wave if you want to</a></p>
         <p>  swim in this beach. FYI... I was enjoying the light of sun in this beach for 3 hour.</p>
-
+        <br>
+        <br>
 
     </section>
+
+    <form action="#">
+        <input type="text" name = nim>
+        <input type="text" name = password>
+        <input type="submit" name = submit value ="save">
+        <br>
+        <br>
+    </form>
+
+    
 
     <aside>
         <!--ini untuk sisi kanan-->
@@ -62,8 +103,10 @@
     </aside>
 
     <footer>
+        <br>
+        <br>
         <!--ini untuk footer-->
-    
+        <p>Copyright &copy; Apple<p>
     </footer>
 
 

@@ -89,7 +89,7 @@ header a {
     margin: 100px  75px;
     display: flex;
     overflow: hidden;
-    font-weight: 50px;
+   
 }
 
 .deskripsi h1 {
@@ -98,15 +98,54 @@ header a {
     margin: 20px 0 0px 15px;
 }
 
-
-
 .deskripsi p {
     border-left: 2px solid grey;
     padding: 5px;
     margin: 0px 0 20px 15px;
     color: rgb(153, 153, 153);
-    font-weight: ;
+ 
 }
+
+.gambar2 {
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-right: 70px;
+}
+
+.gambar2 img {
+    width: 50px;
+    margin-top: 0px;
+}
+
+.container-contac {
+    width: auto;
+    padding: 20px;
+    margin: 100px  75px;
+    display: flex;
+    overflow: hidden;
+    font-weight: 50px;
+
+}
+.penjelas h1 {
+    padding: 5px;
+    margin: 20px 0px 0px 15px;
+    border-right: 2px solid grey;
+}
+
+.gambar2 h2 {
+   
+    padding: 5px;
+    margin: 20px 0px 0px 0px;
+}
+
+.penjelas p {
+    border-right: 2px solid grey;
+    padding-right: 10px;
+    margin: 0px 0px 0px 50px;
+    color: rgb(153, 153, 153);
+}
+   
 
 footer {
     text-align: center;

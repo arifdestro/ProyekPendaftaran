@@ -43,7 +43,6 @@ header a {
     color: #fff;
     padding: 20px;
 }
-
 .container {
     text-align: center;
     padding: 20px;
@@ -96,11 +95,12 @@ header a {
     margin: 10px 10px 10px 50px;
 }
 .container-contact{
-    width: auto;
-    margin: 40px 100px;
+    margin: 40px 20px 40px 100px;
     padding: 20px;
     display: flex;
     overflow: hidden;
+    width: auto;
+    
  }
  .service h1{
     padding: 10px;
@@ -113,43 +113,52 @@ header a {
     margin: 10px 50px 10px 10px;
  }
  .contact{
-     width: 300px;
+     width: 40%;
+     float: left;
      margin-left: 20px;
+     border-left: 2px solid grey;
+     
  }
- .contact .cp{
-     width: 100px;
-     display: inline-block;
-    
-    }
  .cp{
-     width: 50px;
-     border-left: 2px solid gray
+     width: 300px;
+     margin-top: 30px;
+     /* border-left: 2px solid gray; */
+     /* border: 2px solid springgreen;
+      */
     }
     .contact h1{
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 30px;
         font-size: 30px;
     }
  .cp ul li {
      margin-top: 20px;
      list-style-type: none;
+     display: flex;
+     
     }
  .cp img{
-    width: 40px;
-    float: left;
+     /* float: left; */
     padding: 5px;
+    width: 30px;
+    /* border: 2px solid hotpink; */
+    
      }
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 50px;
 }
 
 .social {
-    padding: 20px;
+    padding: 50px;
+    
 }
 
 .social li{
+   
     display: inline-block;
+    /* padding: 50px; */
+    margin-bottom: 10px;
 }
 
 .social img {

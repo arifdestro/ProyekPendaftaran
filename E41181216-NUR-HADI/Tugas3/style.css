@@ -9,6 +9,7 @@ body {
     font-family: 'Patua One', cursive;
     font-weight: 100;
     color: grey;
+    background-color: white;
 
 }
 
@@ -36,12 +37,31 @@ header {
     overflow: hidden;
     background-color: #D1230C;
     border-bottom: 5px solid rgb(153, 21, 6);
+    position: sticky;
+    z-index: 999;
+    top: 0px;
 }
 
 header a {
     text-decoration: none;
     color: #fff;
     padding: 20px;
+}
+
+header nav a:hover {
+    background-color: rgb(136, 19, 4);
+}
+
+header a h1 {
+    font-weight: bold;
+}
+
+header a h2 {
+    font-weight: 400;
+}
+
+.container h1 {
+    font-size: 35px;
 }
 
 .container {
@@ -59,7 +79,7 @@ header a {
 }
 
 .container img {
-    width: 320px;
+    width: 220px;
     position: relative;
 }
 
@@ -89,4 +109,109 @@ footer {
 
 .social img {
     width: 50px;
+}
+
+.container-about {
+    padding: 20px 40px;
+    /* border: 2px solid #D12323; */
+    overflow: hidden;
+    display: flex;
+    /* width: 100%; */
+    margin: 80px 40px;
+}
+
+.gambar {
+    width: 400px;
+}
+
+.gambar img {
+    width: 200px;
+    /* border: 2px solid green; */
+    padding: 40px;
+}
+
+.penjelas {
+    padding: 10px;
+}
+
+.penjelas #about {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    /* border: 1px solid #D1230C; */
+}
+
+.percantik {
+    border-left: 3px solid gray;
+    margin-top: 30px;
+    padding: 10px 10px;
+    /* border: 2px solid #D1230C; */
+}
+
+.penjelas h3 {
+    width: auto;
+    margin: 10px;
+    padding: 5px 50px;
+    font-size: 18px;
+    font-weight: 500;
+    /* border: 1px solid #D1230C; */
+}
+
+.container-contact {
+    padding: 20px 40px;
+    /* border: 2px solid #D12323; */
+    overflow: hidden;
+    display: flex;
+    /* width: 100%; */
+    margin: 150px 40px;
+}
+
+.content {
+    border-right: 3px solid gray;
+}
+
+.content #contact {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content h3 {
+    width: auto;
+    margin: 10px 20px;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact {
+    /* border: 2px solid green; */
+    width: 300px;
+    margin-left: 20px;
+}
+
+.contact .icon {
+    width: 500px;
+    /* border: 2px solid blue; */
+}
+
+.icon ul li {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.icon img {
+    width: 40px;
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+
+
+.contact h3 {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }

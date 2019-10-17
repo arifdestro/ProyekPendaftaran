@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+    color: rgb(100, 100, 100);
+    position: relative;
+
+}
+
+header{
+    background-color: rgb(207, 13, 13);
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 5px solid rgb(102, 0, 0);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    float: left;
+}
+
+header nav ul{
+    float: right;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.container-contact{
+    margin: 100px;
+    display: flex;
+    width: auto;
+}
+
+.text-contact{
+    text-align: justify;
+    padding: 20px;
+    width: 800px;
+    padding: 40px;
+}
+.text-contact {
+    border-right: 2px solid rgb(107, 107, 107);
+}
+
+.contact-icon{
+    width: 300px;
+    padding: 40px;
+}
+
+.contact-icon h2{
+    padding-left: 20px;
+}
+
+.icon ul li{
+    display: inline;
+}
+
+footer{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer ul li{
+    display: inline;
+    list-style: none;
+}
+
+.icon img{
+    width: 40px;
+    display: inline-block;
+    padding: 5px;
+}
+

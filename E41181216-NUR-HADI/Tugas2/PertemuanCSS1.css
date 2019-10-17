@@ -10,13 +10,13 @@ body {background-color: rgb(0, 0, 12)
 }
 
 header {
-    padding: 20px 40px;
+    padding: 20px 20px;
 }
 
 li {
     margin: 0px, ;
-    padding: 40px;
-    font-size: 50px;
+    padding: 10px;
+    font-size: 20px;
     float: right;
     background-color:rgb(0, 0, 15);
 }
@@ -31,10 +31,26 @@ li a {
 color: white;
 text-align: center;
 text-decoration: none;
-padding: 40px;
+padding: 10px;
 font-family:"Ubuntu Condensed", sans-serif;
 }
 
 li a:hover {
 background-color:rgb(1, 59, 59);
+}
+
+.Slideshow{
+  height: auto;
+  background-image: url(https://i.huffpost.com/gen/1559464/thumbs/n-COLLEGE-APPLICATIONS-570.jpg) no-repeat;
+  background-size: cover;
+}
+
+#Gambar1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+
+  height: auto;
+  opacity: 0.25;
 }

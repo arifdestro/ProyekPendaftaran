@@ -1,0 +1,14 @@
+<?php
+
+include_once("config.php");
+
+$id = $_GET['id'];
+
+$result = mysqli_query($mysqli, "DELETE FROM users WHERE id=$id");
+
+header("Location: index.php")
+
+// File delete.php hanya dipanggil saat kita klik link 'Delete'
+//  untuk pengguna manapun yang dipilih.
+
+?>

@@ -17,3 +17,12 @@ header {
 h1 {
     text-align: center;
 }
+.signup {
+    width: 350px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.signup h5 {
+    width: 350px;
+
+}

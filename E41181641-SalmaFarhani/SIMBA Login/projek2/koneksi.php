@@ -4,7 +4,7 @@
 $localhost = "localhost";
 $username = "root";
 $password = "";
-$database = "simba_database";
+$database = "simbafix";
 
 //variable login db
 $mysqli = mysqli_connect($localhost, $username, $password, $database);

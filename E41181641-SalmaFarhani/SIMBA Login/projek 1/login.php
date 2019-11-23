@@ -12,8 +12,8 @@
   <h1>Masuk</h1>
   <table>
   <tbody>
-  <tr><td>Username</td><td> : <input name="username atau email" type="text"></td></tr>
-  <tr><td>Password</td><td> : <input name="password" type="password"></td></tr>
+  <tr><td>Username</td><td> : <input name="NAMA_USER atau _EMAIL_USER" type="text"></td></tr>
+  <tr><td>Password</td><td> : <input name="PASSWORD_USER" type="password"></td></tr>
   <tr><td colspan="2" align="right"><input value="Login" type="submit"> <a href="index.php"></a><input value="Batal" type="reset"></td></tr>
   <tr><td colspan="2" align="center">Belum Punya akun ? <a href="prosesdaftar.php"><b>Daftar</b></a></td></tr>
   </tbody>

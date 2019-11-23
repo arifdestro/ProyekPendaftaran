@@ -5,14 +5,14 @@ include('connector.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tabel Rayon</title>
+	<title>Tabel User</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light alert alert-warning">
 		<div class="container">
-			<a class="navbar-brand" href="#">Tabel Rayon</a>
+			<a class="navbar-brand" href="#">Tabel User</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -31,7 +31,7 @@ include('connector.php');
 	</nav>
 	
 	<div class="container" style="margin-top:20px">
-		<h2>Daftar Rayon</h2>
+		<h2>Daftar User</h2>
 		
 		<hr>
 		

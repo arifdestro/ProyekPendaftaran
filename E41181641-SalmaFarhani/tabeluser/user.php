@@ -39,8 +39,10 @@ include('connector.php');
 			<thead class="thead-dark">
 				<tr>
 					<!-- <th>NO.</th> -->
-					<th>ID RAYON</th>
-					<th>NAMA RAYON</th>
+					<th>ID user</th>
+					<th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
 					<th>AKSI</th>
 					
 				</tr>
@@ -48,7 +50,7 @@ include('connector.php');
 			<tbody>
 				<?php
 				//query ke database SELECT tabel printer urut berdasarkan id yang paling besar
-				$sql = mysqli_query($koneksi, "SELECT * FROM rayon ORDER BY ID_RAYON DESC") or die(mysqli_error($koneksi));
+				$sql = mysqli_query($koneksi, "SELECT * FROM user ORDER BY ID_USER DESC") or die(mysqli_error($koneksi));
 				//jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
 				if(mysqli_num_rows($sql) > 0){
 					//membuat variabel $no untuk menyimpan nomor urut
@@ -59,11 +61,13 @@ include('connector.php');
 						echo '
 						<tr>
 							
-							<td>'.$data['ID_RAYON'].'</td>
-							<td>'.$data['NAMA_RAYON'].'</td>
+							<td>'.$data['ID_USER'].'</td>
+                            <td>'.$data['NAMA_USER'].'</td>
+                            <td>'.$data['_EMAIL_USER'].'</td>
+                            <td>'.$data['PASSWORD_USER'].'</td>
 							<td>
-								<a href="ubah.php?ID_RAYON='.$data['ID_RAYON'].'" class="badge badge-warning">Edit</a>
-								<a href="hapus.php?ID_RAYON='.$data['ID_RAYON'].'" class="badge badge-danger" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="ubah.php?ID_USER='.$data['ID_USER'].'" class="badge badge-warning">Edit</a>
+								<a href="hapus.php?ID_USER='.$data['ID_USER'].'" class="badge badge-danger" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
 							</td>
 						</tr>
 						';

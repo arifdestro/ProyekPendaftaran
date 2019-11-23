@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tabel Master Jenis Lomba</title>
+	<title>Tabel Master Rayon</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light alert alert-warning">
 		<div class="container">
-			<a class="navbar-brand" href="#">Tabel Master Jenis Lomba</a>
+			<a class="navbar-brand" href="#">Tabel Master Rayon</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -34,13 +34,13 @@
 		
 		<?php
 		if(isset($_POST['submit'])){
-			$id			= $_POST['ID_RAYON'];
-			$nama			= $_POST['NAMA_RAYON'];
+			$ID_RAYON			= $_POST['ID_RAYON'];
+			$NAMA_RAYON		= $_POST['NAMA_RAYON'];
 			
-			$cek = mysqli_query($koneksi, "SELECT * FROM rayon WHERE ID_RAYON='$id'") or die(mysqli_error($koneksi));
+			$cek = mysqli_query($koneksi, "SELECT * FROM rayon WHERE ID_RAYON='$ID_RAYON'") or die(mysqli_error($koneksi));
 			
 			if(mysqli_num_rows($cek) == 0){
-				$sql = mysqli_query($koneksi, "INSERT INTO rayon(ID_RAYON, NAMA_RAYON) VALUES('$id', '$nama')") or die(mysqli_error($koneksi));
+				$sql = mysqli_query($koneksi, "INSERT INTO rayon(ID_RAYON, NAMA_RAYON) VALUES('$ID_RAYON', '$NAMA_RAYON')") or die(mysqli_error($koneksi));
 				
 				if($sql){
 					echo '<script>alert("Berhasil menambahkan data."); document.location="tambah.php";</script>';

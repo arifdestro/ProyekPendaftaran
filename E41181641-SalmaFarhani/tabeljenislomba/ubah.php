@@ -34,12 +34,12 @@
 		
 		<?php
 		//jika sudah mendapatkan parameter GET id dari URL
-		if(isset($_GET['id'])){
+		if(isset($_GET['ID_JENIS_LOMBA'])){
 			//membuat variabel $id untuk menyimpan id dari GET id di URL
-			$id = $_GET['id'];
+			$ID_JENIS_LOMBA = $_GET['ID_JENIS_LOMBA'];
 			
 			//query ke database SELECT tabel mahasiswa berdasarkan id = $id
-			$select = mysqli_query($koneksi, "SELECT * FROM jenis_lomba WHERE ID_JENIS_LOMBA='$id'") or die(mysqli_error($koneksi));
+			$select = mysqli_query($koneksi, "SELECT * FROM jenis_lomba WHERE ID_JENIS_LOMBA='$ID_JENIS_LOMBA'") or die(mysqli_error($koneksi));
 			
 			//jika hasil query = 0 maka muncul pesan error
 			if(mysqli_num_rows($select) == 0){
@@ -56,13 +56,13 @@
 		<?php
 		//jika tombol simpan di tekan/klik
 		if(isset($_POST['submit'])){
-			$nama			= $_POST['NAMA_LOMBA'];
-			$warna			= $_POST['BIAYA'];
+			$NAMA_LOMBA			= $_POST['NAMA_LOMBA'];
+			$BIAYA			= $_POST['BIAYA'];
 			
-			$sql = mysqli_query($koneksi, "UPDATE jenis_lomba SET NAMA_LOMBA='$nama', BIAYA='$warna' WHERE ID_JENIS_LOMBA='$id'") or die(mysqli_error($koneksi));
+			$sql = mysqli_query($koneksi, "UPDATE jenis_lomba SET ID_JENIS_LOMBA= '$ID_JENIS_LOMBA', NAMA_LOMBA='$NAMA_LOMBA', BIAYA='$BIAYA' WHERE ID_JENIS_LOMBA='$ID_JENIS_LOMBA'") or die(mysqli_error($koneksi));
 			
 			if($sql){
-				echo '<script>alert("Berhasil menyimpan data."); document.location="ubah.php?ID_JENIS_LOMBA='.$id.'";</script>';
+				echo '<script>alert("Berhasil menyimpan data."); document.location="ubah.php?ID_JENIS_LOMBA='.$ID_JENIS_LOMBA.'";</script>';
 			}else{
 				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 			}
@@ -70,11 +70,11 @@
         
 		?>
 		
-		<form action="ubah.php?id=<?php echo $id; ?>" method="post">
+		<form action="ubah.php?id=<?php echo $ID_JENIS_LOMBA; ?>" method="post">
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Id Jenis Lomba</label>
 				<div class="col-sm-10">
-					<input type="text" name="ID_JENIS_LOMBA" class="form-control" size="4" value="<?php echo $data['ID_JENIS_LOMBA']; ?>" readonly required>
+					<input type="text" name="ID_JENIS_LOMBA" class="form-control" size="4" value="<?php echo $data['ID_JENIS_LOMBA']; ?>" required>
 				</div>
 			</div>
 

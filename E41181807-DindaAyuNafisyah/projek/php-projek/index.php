@@ -1,7 +1,9 @@
 <?php
+require'proseslogin.php';
 session_start();
-if(!isset($_SESSION['NAMA_USER'])) {
+if(!isset($_SESSION["Login"])) {
    header('location:login.php'); 
+   exit;
 } else { 
    $username = $_SESSION['NAMA_USER']; 
 }

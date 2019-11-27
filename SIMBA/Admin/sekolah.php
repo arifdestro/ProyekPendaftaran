@@ -91,6 +91,9 @@ include('connector.php');
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
         </div>
         </li>
+
+        
+        
     </ul>
 
     </nav>
@@ -126,12 +129,49 @@ include('connector.php');
         <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
-        </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="tables.php">
+
+            <li class="nav-item">
+            <a class="nav-link" href="user.php">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>User</span></a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="sekolah.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Sekolah</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="siswa.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Siswa</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="jenis_lomba.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Jenis Lomba</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="rayon.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Rayon</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="daftar.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Daftar</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="bayar.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Bayar</span></a>
+        </li>
+
     </ul>
 
     <div id="content-wrapper">
@@ -151,7 +191,7 @@ include('connector.php');
             <div class="card-header">
             <i class="fas fa-table"></i>
             Data Table Example</div>
-            <a class="nav-link" href="tambah_sekolah.php">Tambah</a>
+            <div><a class="btn btn-primary" href="tambah_sekolah.php" role="button">Tambah</a></div>
             <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

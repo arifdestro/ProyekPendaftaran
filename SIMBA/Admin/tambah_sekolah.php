@@ -195,7 +195,7 @@
 				$sql = mysqli_query($koneksi, "INSERT INTO sekolah(NPSN, NAMA_SEKOLAH) VALUES('$npsn', '$nama_sekolah' )") or die(mysqli_error($koneksi));
 				
 				if($sql){
-					echo '<script>alert("Berhasil menambahkan data."); document.location="sekolah.php";</script>';
+					// echo '<script>alert("Berhasil menambahkan data."); document.location="sekolah.php";</script>';
 				}else{
 					echo '<div class="alert alert-warning">Gagal melakukan proses tambah data.</div>';
 				}

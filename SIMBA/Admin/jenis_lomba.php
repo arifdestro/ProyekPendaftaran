@@ -1,12 +1,13 @@
 <?php
-    //memasukkan file config.php
-    include('connector.php');
-    ?>
+//memasukkan file config.php
+include('connector.php');
+?>
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
 
-    <head>
+<html lang="en">
+
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Dashboard</title>
+    <title>SB Admin - Tables</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -88,30 +89,32 @@
             <a class="dropdown-item" href="#">Activity Log</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
-            </div>
+        </div>
         </li>
-        </ul>
+
+        
+        
+    </ul>
 
     </nav>
 
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
-            </a>
+        </a>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
             <span>Pages</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
             <a class="dropdown-item" href="login.html">Login</a>
             <a class="dropdown-item" href="register.html">Register</a>
@@ -120,16 +123,14 @@
             <h6 class="dropdown-header">Other Pages:</h6>
             <a class="dropdown-item" href="404.html">404 Page</a>
             <a class="dropdown-item" href="blank.html">Blank Page</a>
-            </div>
+        </div>
         </li>
-
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
-        </li>
 
-        <li class="nav-item">
+            <li class="nav-item">
             <a class="nav-link" href="user.php">
             <i class="fas fa-fw fa-table"></i>
             <span>User</span></a>
@@ -170,153 +171,62 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Bayar</span></a>
         </li>
-        </ul>
+    </ul>
 
-        <div id="content-wrapper">
+    <div id="content-wrapper">
 
         <div class="container-fluid">
 
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
+            <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Overview</li>
-            </ol>
-
-            <div class="container" style="margin-top:20px">
-		<h2>UBAH DATA SEKOLAH</h2>
-		
-		<hr>
-		
-		<?php
-		//jika sudah mendapatkan parameter GET id dari URL
-		if(isset($_GET['NPSN'])){
-			//membuat variabel $id untuk menyimpan id dari GET id di URL
-			$NPSN = $_GET['NPSN'];
-			
-			//query ke database SELECT tabel mahasiswa berdasarkan id = $id
-			$select = mysqli_query($koneksi, "SELECT * FROM sekolah WHERE NPSN='$NPSN'") or die(mysqli_error($koneksi));
-			
-			//jika hasil query = 0 maka muncul pesan error
-			if(mysqli_num_rows($select) == 0){
-				echo '<div class="alert alert-warning">ID tidak ada dalam database.</div>';
-				exit();
-			//jika hasil query > 0
-			}else{
-				//membuat variabel $data dan menyimpan data row dari query
-				$data = mysqli_fetch_assoc($select);
-			}
-		}
-		?>
-		
-		<?php
-		//jika tombol simpan di tekan/klik
-		if(isset($_POST['submit'])){
-			$NPSN			= $_POST['NPSN'];
-			$NAMA_SEKOLAH	= $_POST['NAMA_SEKOLAH'];
-			
-			$sql = mysqli_query($koneksi, "UPDATE sekolah SET NPSN='$NPSN', NAMA_SEKOLAH='$NAMA_SEKOLAH' WHERE NPSN='$NPSN'") or die(mysqli_error($koneksi));
-			
-			if($sql){
-                // echo '<script>alert("Berhasil menyimpan data."); 
-                //document.location="sekolah.php?NPSN='.$NPSN.'";</script>';
-			}else{
-				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
-			}
-		}
-		?>
-		
-		<form action="ubah.php?NPSN=<?php echo $NPSN; ?>" method="post">
-
-			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">NPSN</label>
-				<div class="col-sm-10">
-					<input type="text" name="NPSN" class="form-control" value="<?php echo $data['NPSN']; ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">NAMA SEKOLAH</label>
-				<div class="col-sm-10">
-					<input type="text" name="NAMA_SEKOLAH" class="form-control" value="<?php echo $data['NAMA_SEKOLAH']; ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">&nbsp;</label>
-				<div class="col-sm-10">
-					<input type="submit" name="submit" class="btn btn-primary" value="SIMPAN">
-					<a href="sekolah.php" class="btn btn-warning">KEMBALI</a>
-				</div>
-			</div>
-		</form>
-		
+            <li class="breadcrumb-item active">Tables</li>
+        </ol>
+    <div>
+    <table class="table table-striped table-hover table-sm table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th>ID JL</th>
+					<th>JENIS LOMBA</th>
+					<th>BIAYA</th>
+					<th>AKSI</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				//query ke database SELECT tabel printer urut berdasarkan id yang paling besar
+				$sql = mysqli_query($koneksi, "SELECT * FROM jenis_lomba ORDER BY ID_JENIS_LOMBA ASC") or die(mysqli_error($koneksi));
+				//jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
+				if(mysqli_num_rows($sql) > 0){
+					//membuat variabel $no untuk menyimpan nomor urut
+					$no = 1;
+					//melakukan perulangan while dengan dari dari query $sql
+					while($data = mysqli_fetch_assoc($sql)){
+						//menampilkan data perulangan
+						echo '
+						<tr>
+							<td>'.$data['ID_JENIS_LOMBA'].'</td>
+							<td>'.$data['NAMA_LOMBA'].'</td>
+							<td>'.$data['BIAYA'].'</td>
+							<td>
+								<a href="ubah_jl.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-warning">Edit</a>
+								<a href="hapus_jl.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-danger" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+							</td>
+						</tr>
+						';
+						$no++;
+					}
+				//jika query menghasilkan nilai 0
+				}else{
+					echo '
+					<tr>
+						<td colspan="6"><b>Tidak ada data.</b></td>
+					</tr>
+					';
+				}
+				?>
+			<body>
+		</table>
 	</div>
-            
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-            <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright © Your Website 2019</span>
-            </div>
-            </div>
-        </footer>
-
-        </div>
-        <!-- /.content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-
-    <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
-
-    </body>
-
-    </html>

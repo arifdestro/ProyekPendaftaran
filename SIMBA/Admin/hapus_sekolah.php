@@ -17,13 +17,13 @@ if(isset($_GET['NPSN'])){
 		if($del){
 			echo '<script>alert("Berhasil menghapus data."); document.location="sekolah.php";</script>';
 		}else{
-			echo '<script>alert("Gagal menghapus data."); document.location="index.php";</script>';
+			echo '<script>alert("Gagal menghapus data."); document.location="sekolah.php";</script>';
 		}
 	}else{
-		echo '<script>alert("ID tidak ditemukan di database."); document.location="index.php";</script>';
+		echo '<script>alert("ID tidak ditemukan di database."); document.location="sekolah.php";</script>';
 	}
 }else{
-	echo '<script>alert("ID tidak ditemukan di database."); document.location="index.php";</script>';
+	echo '<script>alert("ID tidak ditemukan di database."); document.location="sekolah.php";</script>';
 }
 
 ?>

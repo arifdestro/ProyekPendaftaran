@@ -60,8 +60,8 @@ include('connector.php');
 							<td>'.$data['NAMA_LOMBA'].'</td>
 							<td>'.$data['BIAYA'].'</td>
 							<td>
-								<a href="ubah_jl.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-warning">Edit</a>
-								<a href="hapus_jl.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-danger" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
+								<a href="ubah_jl1.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-warning">Edit</a>
+								<a href="hapus_jl1.php?ID_JENIS_LOMBA='.$data['ID_JENIS_LOMBA'].'" class="badge badge-danger" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
 							</td>
 						</tr>
 						';

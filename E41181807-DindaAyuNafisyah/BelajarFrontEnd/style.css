@@ -5,13 +5,12 @@
 *{
     padding: 0px;
 	margin: 0px;
-	background-color: rgb(11, 11, 37);
+	background-color:rgb(207, 207, 238);
 }
 
 .content {
 	display: flex;
 	margin-top: 35px;
-	background-color: black;
 	color: palevioletred;
 }
 
@@ -23,18 +22,20 @@
 .title h1 {
     font-family: 'Pacifico', cursive;
 	font-size: 40px;
+	background-color: rgb(56, 11, 46);
+	border-radius: 50px;
+	padding: 15px;
    
 }
 
 .navigasi {
 	width: 1500px;
-	
 }
 
 .contentnav {
     float: right;
 	margin-right:50px;
-	padding: 5px 20px 5px 20px;
+	padding: 5px 0px 5px 0px;
 }
 
 .navigasi li{
@@ -43,9 +44,7 @@
 	padding: 5px 20px 5px 20px;
 	margin-top: 15px;
 	margin-left: 10px;
-	margin-right: 10px;
 	font-family: 'Oswald', sans-serif; 
-	background-color: black; 
 	border-radius : 50px;
 	transition: 0.5s;
 }
@@ -66,52 +65,22 @@
 	border-radius: 50px;
 }
 
-.container {
-    margin: 75px 50px 50px 50px;
-    display: flex;
-}
 
 
-.deskripsi {
-    margin-bottom: 35px;
-}
 
-.deskripsi h1 {
-    font-size: 60px;
+
+.conterside h1 {
+    font-size: 40px;
 	font-family: 'PT Serif', serif;
 	color: grey;
+	text-align: center;
+	margin-top: 30px;
 }
 
-.deskripsi p {
-    font-size: 28px;
-    margin-top: 10px;
-	font-family: 'PT Serif', serif;
-	color: grey;
-}
-
-.linkButton {
-    margin-top: 0px;
-    margin-bottom: 80px;
-    border: solid palevioletred;
-    border-radius: 25px;
-    width: 120px;
-	padding: 10px 15px 10px 15px;
-	transition: 0.5s;
-}
-
-.linkButton:hover {
-	transform: scale(1.2);
-	opacity: 1;
-	filter: blur(0px);
-	border-bottom:solid rgb(166, 73, 253) 4px ;
-}
-.linkButton p {
-    font-family: 'PT Serif', serif;
-	color: white;
-}
 
 .followme {
-    display: flex;
+	display: flex;
+	margin-top: 60Px;
 }
 
 .word {
@@ -143,241 +112,116 @@
     padding: 10px;
 }
 
-.slideshow { 
-	position: relative; 
-	overflow: hidden; 
-	background: #efefef;
-    width: 500px;
-    height: 300px;
-    margin: auto;
-    background-size: cover; 
-    border: palevioletred 10px;
-    border-style: solid;
-
+.item h3 {
+	font-family: 'Pacifico', cursive;
 }
 
-.slider{
-    float: left;
-    width: 500px;
-    height:300px;
-	position: absolute;
+.item p {
+	font-family: 'Pacifico', cursive;
 }
 
-.isi-slider{
-    position: relative; 
-	width:500px;
-	
-
-      
- /*pengaturan durasi lama tampil gambar bisa di atur di bawah ini*/
-   
-	animation-name:slider;
-	animation-duration:16s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count:infinite;
-	-webkit-animation-name:slider;
-	-webkit-animation-duration:16s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count:infinite;
-	-moz-animation-name:slider;
-	-moz-animation-duration:16s;
-	-moz-animation-timing-function: ease-in-out;
-	-moz-animation-iteration-count:infinite;
-	-o-animation-name:slider;
-	-o-animation-duration:16s;
-	-o-animation-timing-function: ease-in-out;
-	-o-animation-iteration-count:infinite;
+.two-banner {
+	text-align: center;
+	margin-top: 50px;
 }
 
-/*saat gambar di hover oleh cursor mouse maka berhenti slide*/
-.isi-slider:hover { 
-	-webkit-animation-play-state:paused; 
-	-moz-animation-play-state:paused; 
-	-o-animation-play-state:paused; 
-    animation-play-state:paused; 
-}
-
-.slider {
+.copyright p {
+	margin-top: 16px;
+	color: grey;
+	font-family: 'Oswald', sans-serif;
 	float: right;
-}
-.slideshow:after { 
-	font-size: 150px; 
-	position: absolute; 
-	z-index: 12; 
-	color: rgba(255,255,255, 0); 
-	left: 300px; top: 80px; 
-	-webkit-transition: 1s all ease-in-out; 
-	-moz-transition: 1s all ease-in-out; 
-	transition: 1s all ease-in-out; 
-}
+  }
+/* Bordered form */
+form {
+	border: 3px solid #f1f1f1;
+	width : 1000px;
+	height: 600px;
+    margin-left: 15%;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+	background-color: rgb(60, 128, 255);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+	opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: rgb(155, 155, 155);
+  }
+  .cancelbtn a {
+	background-color: rgb(155, 155, 155);
+	font-family: 'Oswald', sans-serif;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+	width: 100px;
+	border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+	padding: 16px;
+  }
 
-.slideshow:hover:after { 
-	color: rgba(255,255,255, 0.6);  
+  .container label {
+	font-family: 'Oswald', sans-serif;
+  }
+
+.containers {
+	padding: 16px;
+	margin-top: 40 px;
+	margin-bottom: 0px;
 }
-
-
-@-moz-keyframes slider {     
-	0% {
-		left: 0; opacity: 0; 
-	}     
-	2% {
-		opacity: 1; 
-	}     
-	20% {
-		left: 0; opacity: 1; 
-	}     
-	21% {
-		opacity: 0; 
-	}     
-	24% {
-		opacity: 0; 
-	}     
-	25% {
-		left: -768px; opacity: 1; 
-	}       
-	45% {
-		left: -768px; opacity: 1; 
-	}     
-	46% {
-		opacity: 0; 
-	}     
-	48% {
-		opacity: 0; 
-	}     
-	50% {
-		left: -1536px; opacity: 1; 
-	}     
-	70% {
-		left: -1536px; opacity: 1; 
-	}     
-	72% {
-		opacity: 0; 
-	}     
-	74% {
-		opacity: 0; 
-	}    
-	75% {
-		left: -2304px; opacity: 1; 
-	}   	
-	95% {
-		left: -2304px; opacity: 1; 
-	}   	
-	97% { 
-		left: -2304px; opacity: 0;
-	}   	
-	100% {
-		left: 0; opacity: 0; 
+  
+  /* The "Forgot password" text */
+  span.rgs {
+	font-family: 'Oswald', sans-serif;
+}
+  span.psw {
+	float: right;
+	margin-top : 30px;
+	font-family: 'Oswald', sans-serif;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+	span.psw {
+	  display: block;
+	  float: none;
 	}
-} 
-
-@-webkit-keyframes slider {     
-	0% {
-		left: 0; opacity: 0; 
-	}     
-	2% {
-		opacity: 1; 
-	}     
-	20% {
-		left: 0; opacity: 1; 
-	}     
-	21% {
-		opacity: 0; 
-	}     
-	24% {
-		opacity: 0; 
-	}     
-	25% {
-		left: -768px; opacity: 1; 
-	}       
-	45% {
-		left: -768px; opacity: 1; 
-	}     
-	46% {
-		opacity: 0; 
-	}     
-	48% {
-		opacity: 0; 
-	}     
-	50% {
-		left: -1536px; opacity: 1; 
-	}     
-	70% {
-		left: -1536px; opacity: 1; 
-	}     
-	72% {
-		opacity: 0; 
-	}     
-	74% {
-		opacity: 0; 
-	}    
-	75% {
-		left: -2304px; opacity: 1; 
-	}   	
-	95% {
-		left: -2304px; opacity: 1; 
-	}   	
-	97% { 
-		left: -2304px; opacity: 0;
-	}   	
-	100% {
-		left: 0; opacity: 0; 
+	.cancelbtn {
+	  width: 100%;
 	}
-} 
-
-
-@keyframes slider {     
-	0% {
-		left: 0; opacity: 0; 
-	}     
-	2% {
-		opacity: 1; 
-	}     
-	20% {
-		left: 0; opacity: 1; 
-	}     
-	21% {
-		opacity: 0; 
-	}     
-	24% {
-		opacity: 0; 
-	}     
-	25% {
-		left: -768px; opacity: 1; 
-	}     
-	45% {
-		left: -768px; opacity: 1; 
-	}     
-	46% {
-		opacity: 0; 
-	}     
-	48% {
-		opacity: 0; 
-	}     
-	50% {
-		left: -1536px; opacity: 1; 
-	}     
-	70% {
-		left: -1536px; opacity: 1; 
-	}     
-	72% {
-		opacity: 0; 
-	}     
-	74% {
-		opacity: 0; 
-	}    
-	75% {
-		left: -2304px; opacity: 1; 
-	}   	
-	95% {
-		left: -2304px; opacity: 1; 
-	}   	
-	97% { 
-		left: -2304px; opacity: 0; 
-	} 
-
-	100% {
-		left: 0; opacity: 0; 
-	}
-}
-
-
+  }

@@ -1,0 +1,43 @@
+body {
+    background-color: white;
+}
+.container {
+    width: 600px;
+    height: 450px;
+    background-color: rgba(44, 28, 28, 0.3);
+    float: right;
+    margin : 100px 100px 10px 0;
+}
+.container h2 {
+    color: white;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+.signup {
+    width: 350px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.signup h5 {
+    width: 350px;
+
+}
+.login button {
+   background-color: rgba(0, 0, 0,0.3);
+}
+.login a {
+   float: right;
+} 
+.daftar {
+    float: right;
+}
+.daftar button {
+    background-color: rgba(0, 0, 0,0.3);
+    text-decoration: none;
+    
+}
+.option {
+    margin-top: 30px;
+}

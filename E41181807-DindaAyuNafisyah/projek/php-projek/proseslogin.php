@@ -4,9 +4,9 @@
    if (isset($_POST["Login"])){
      global $db;
    
-   $username = $_POST['NAMA_USER'];
-   $pass = $_POST['PASSWORD_USER'];   
-   $sql = "SELECT * FROM user WHERE NAMA_USER = ('$username' OR _EMAIL_USER = '$username')";
+   $username = $_POST['NAMA_ADMIN'];
+   $pass = $_POST['PASSWORD_ADMIN'];   
+   $sql = "SELECT * FROM admin WHERE NAMA_ADMIN = ('$username')";
    $query = $db->query($sql);
    $hasil = $query->fetch_assoc();
    if($query->num_rows == 0) {

@@ -4,7 +4,7 @@
 $localhost = "localhost";
 $username = "root";
 $password = "";
-$database = "pendaftaran_";
+$database = "simba_iain";
 
 //variable login db
 $mysqli = mysqli_connect($localhost, $username, $password, $database);

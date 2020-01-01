@@ -24,7 +24,7 @@ if(isset($_SESSION['admin_login'])){
         <div class="card-header">
         <i class="fas fa-table"></i>
         Data Bayar Olimpiade</div>
-        <div><a class="btn btn-primary" href="#" role="button">Cetak</a></div>
+        <div><a class="btn btn-primary" href="cetak_bayar_olimpiade.php" role="button">Cetak</a></div>
         <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -34,16 +34,16 @@ if(isset($_SESSION['admin_login'])){
                             <th>NAMA USER</th>
                             <th>TGL DAFTAR</th>
                             <th>ID DAFTAR</th>
-                            <th>TGL BAYAR</th>
                             <th>ID BAYAR</th>
+                            <th>TGL BAYAR</th>
                             <th>TOTAL BAYAR</th>
 S                        </tr>
                     </thead>
                     <tbody>
 
                         <?php
-                        $result = mysqli_query($koneksi, 
-                        "SELECT daftar.ID_DAFTAR, daftar.TGL_DAFTAR, user.ID_USER, user.NAMA_USER, bayar.ID_BAYAR, daftar.TOTAL_BAYAR, bayar.TGL_BAYAR, daftar.STATUS, jenis_lomba.ID_JENIS_LOMBA
+                        $no = 1;
+                        $sql = mysqli_query($koneksi,"SELECT daftar.ID_DAFTAR, daftar.TGL_DAFTAR, user.ID_USER, user.NAMA_USER, bayar.ID_BAYAR, daftar.TOTAL_BAYAR, bayar.TGL_BAYAR, daftar.STATUS, jenis_lomba.ID_JENIS_LOMBA
                         FROM daftar, bayar, user, jenis_lomba
                         WHERE daftar.ID_USER = user.ID_USER
                         AND bayar.ID_DAFTAR = daftar.ID_DAFTAR
@@ -51,37 +51,23 @@ S                        </tr>
                         AND jenis_lomba.ID_JENIS_LOMBA='J0001'
                         AND daftar.STATUS='1'
                         ");
-
-                        if(mysqli_num_rows($result) > 0){
-                            //membuat variabel $no untuk menyimpan nomor urut
-                            $no = 1;
-                            //melakukan perulangan while dengan dari dari query $sql
-                            while($data = mysqli_fetch_assoc($result)){
-                                //menampilkan data perulangan
-                                echo '
-                                <tr>
-                                    <td>'.$no.'</td>
-                                    <td>'.$data['NAMA_USER'].'</td>
-                                    <td>'.$data['ID_DAFTAR'].'</td>
-                                    <td>'.$data['TGL_DAFTAR'].'</td>
-                                    <td>'.$data['ID_BAYAR'].'</td>
-                                    <td>'.$data['TGL_BAYAR'].'</td>
-                                    <td>'.$data['TOTAL_BAYAR'].'</td>
-                                </tr>
-                                ';
-                                $no++;
-                            }
-                        //jika query menghasilkan nilai 0
-                        }else{
-                            echo '
-                            <tr>
-                                <td colspan="6"><b>Tidak ada data.</b></td>
-                            </tr>
-                            ';
-                        }
+                        while($data = mysqli_fetch_array($sql)){
                     ?>
-                    <body>
+                    <tr>
+				<td><?php echo $no++; ?></td>
+         		<td><?php echo $data['NAMA_USER'];?></td>
+         		<td><?php echo $data['TGL_DAFTAR'];?></td>
+         		<td><?php echo $data['ID_DAFTAR'];?></td>
+         		<td><?php echo $data['ID_BAYAR'];?></td>
+         		<td><?php echo $data['TGL_BAYAR'];?></td>
+         		<td><?php echo $data['TOTAL_BAYAR'];?></td>
+			</tr>
+            <?php 
+			}
+			?>
+            <body>
                 </table>
+                <br/>
             </div>
         </div>
     </div>
